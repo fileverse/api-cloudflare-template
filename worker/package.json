@@ -1,0 +1,14 @@
+{
+  "name": "fileverse-api-worker",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/containers": "^0.1.0",
+    "@cloudflare/workers-types": "^4.20260101.0",
+    "wrangler": "^4.25.0",
+    "typescript": "^5.5.0"
+  }
+}

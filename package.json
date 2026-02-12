@@ -1,0 +1,13 @@
+{
+  "name": "api-cloudflare-template",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "One-click Cloudflare deploy template for Fileverse API",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@fileverse/api": "^0.0.3"
+  }
+}
