@@ -24,7 +24,7 @@ Your API will be live at `https://fileverse-api.<your-account>.workers.dev`
 
 ```bash
 git clone https://github.com/fileverse/api-cloudflare-template
-cd api-cloudflare-template/worker
+cd api-cloudflare-template
 npm install
 npx wrangler secret put API_KEY
 npm run deploy
@@ -41,7 +41,6 @@ By default, SQLite lives on the container's ephemeral disk. For near-zero data l
 3. Set the Litestream secrets:
 
 ```bash
-cd worker
 npx wrangler secret put LITESTREAM_REPLICA_URL    # e.g. s3://your-bucket/fileverse.db
 npx wrangler secret put LITESTREAM_ENDPOINT        # e.g. https://<account-id>.r2.cloudflarestorage.com
 npx wrangler secret put LITESTREAM_BUCKET           # e.g. your-bucket
