@@ -1,5 +1,5 @@
 interface Env {
-  FILEVERSE: DurableObjectNamespace;
+  HYPERDRIVE: Hyperdrive;
   API_KEY: string;
   DATABASE_URL: string;
   RPC_URL?: string;

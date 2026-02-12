@@ -5,7 +5,7 @@
       "main": "src/worker.ts",
       "permissions": {
         "scopes": {
-          "account": ["workers_scripts:write", "containers:write"]
+          "account": ["workers_scripts:write"]
         }
       }
     }

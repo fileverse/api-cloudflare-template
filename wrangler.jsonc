@@ -3,27 +3,13 @@
   "main": "src/worker.ts",
   "compatibility_date": "2026-02-11",
   "compatibility_flags": ["nodejs_compat"],
-  "containers": [
+  "hyperdrive": [
     {
-      "class_name": "FileverseContainer",
-      "image": "./Dockerfile",
-      "instance_type": "standard-1",
-      "max_instances": 1
+      "binding": "HYPERDRIVE",
+      "id": "<hyperdrive-config-id>"
     }
   ],
-  "durable_objects": {
-    "bindings": [
-      {
-        "class_name": "FileverseContainer",
-        "name": "FILEVERSE"
-      }
-    ]
-  },
-  "migrations": [
-    {
-      "new_sqlite_classes": ["FileverseContainer"],
-      "tag": "v1"
-    }
-  ],
-  "observability": { "enabled": true }
+  "observability": {
+    "enabled": true
+  }
 }
