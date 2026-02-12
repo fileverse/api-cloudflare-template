@@ -1,4 +1,4 @@
-import { Container } from "@anthropic-ai/cloudflare-containers";
+import { Container, getContainer } from "@cloudflare/containers";
 
 export class FileverseContainer extends Container<Env> {
   defaultPort = 8001;
