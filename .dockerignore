@@ -1,12 +1,4 @@
-node_modules/
-.git/
-.env
+node_modules
+.wrangler
+.git
 .dev.vars
-.dev.vars.example
-*.db
-*.db-shm
-*.db-wal
-src/
-wrangler.jsonc
-tsconfig.json
-worker-configuration.d.ts

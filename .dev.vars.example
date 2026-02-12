@@ -1,1 +1,2 @@
 API_KEY=your-fileverse-api-key-here
+DATABASE_URL=postgresql://user:password@host:5432/dbname
