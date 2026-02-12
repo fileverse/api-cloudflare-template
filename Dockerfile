@@ -1,15 +1,3 @@
-# ── Builder stage ──────────────────────────────────────────────
-FROM node:20-slim AS builder
-
-WORKDIR /app
-
-# Install build tools for better-sqlite3 native addon compilation
-RUN apt-get update && apt-get install -y python3 make g++ && rm -rf /var/lib/apt/lists/*
-
-COPY package.json package-lock.json* ./
-RUN npm ci
-
-# ── Production stage ──────────────────────────────────────────
 FROM node:20-slim
 
 WORKDIR /app
@@ -22,10 +10,10 @@ RUN apt-get update && apt-get install -y ca-certificates wget && \
     rm /tmp/litestream.deb && \
     apt-get purge -y wget && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
-# Copy production dependencies only
-COPY package.json package-lock.json* ./
+# Install production dependencies (includes better-sqlite3 native addon)
+COPY package.json ./
 RUN apt-get update && apt-get install -y python3 make g++ && \
-    npm ci --omit=dev && \
+    npm install --omit=dev && \
     apt-get purge -y python3 make g++ && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
 # Copy app files
